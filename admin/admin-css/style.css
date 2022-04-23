@@ -1,0 +1,433 @@
+@import url('https://fonts.googleapis.com/css2?family=Mochiy+Pop+P+One&display=swap');
+
+ /*Bootstrap Icons */
+@import url("https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.4.0/font/bootstrap-icons.min.css");
+
+:root{
+  --trans: transparent;
+  --fewtran:rgba(250,250,250,0.25);
+  --primary:#fff;
+  --red:rgb(255,81,82);
+  --black:rgba(0,0,0,0.939);
+  --blue:#2827CC;
+  --blue-5:rgba(40,39,204,0.898);
+  --hvrbg:rgb(71,247,238);
+  --primary-text:rgb(67,62,83);
+  --smoothblack:rgba(0,0,0,0.79);
+  --somothyellow:#F4BE2C;
+  --grydimigo:linear-gradient(rgba(236,0,140,0.902),#fc6767);
+  --grybest:linear-gradient(47deg,rgb(29,196,255) ,rgba(135,236,0,0.724));
+  --cbox-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+} 
+
+.btn{
+  border: none;
+  outline: none;
+  border-radius: 30px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  font-weight: 800;
+  cursor: pointer;
+  transition: all .23s ease-in-out,all .25s ease-in-out;
+} 
+.btn:focus {
+  border: none !important;
+  box-shadow: none;
+}
+.btn:hover {  
+  color: #fff !important;
+background:linear-gradient(-78deg,#b93df3,#f75f5f) !important;
+}
+.d-btn {
+  border: none;
+  outline: none;
+  background: var(--red);
+  color: #fff;
+  border-radius: 50%;
+  padding: 10px;
+  width: 38px;
+  height: 38px;
+  font-size: 18px;
+  font-weight: 680;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+.d-btn:hover{
+  background: #1a07ff;
+}
+.e-btn {
+  border: none;
+  outline: none;
+  background: var(--smoothblack);
+  color: #fff;
+  border-radius: 50%;
+  padding: 10px;
+  width: 38px;
+  height: 38px;
+  font-size: 18px;
+  font-weight: 680;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+.e-btn:hover {
+  background: white;
+  color: #000;
+}
+
+body{
+  background: #f7f7f7fd;
+  font-family: 'Poppins', sans-serif;
+}
+.header{
+  background: var(--primary);
+  width: 100%; 
+  height: 60px;
+  position: sticky;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 20px;
+  padding-right: 20px; 
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  z-index: 999;
+}
+
+.header .logo{
+ color: var(--primary-text);
+  font-family: 'Mochiy Pop P One', sans-serif;
+}
+.header .navigation-bar{
+  font-size: 22px;
+  color: var(--primary-text);
+  transition: all 0.3s;
+} 
+.header .navigation-bar:active{
+  background: var(--hvrbg);
+  padding: 5px 6px;
+  border-radius: 4px; 
+}
+.header .wrapper {
+  position: fixed;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100vh;
+  background: var(--smoothblack);
+  transition: all 0.7s !important;
+  
+} 
+.header .wrapper nav{
+  position: absolute;
+  top:0;
+  left:-240px; 
+  overflow: scroll;
+  width: 240px;
+  background: var(--primary);
+  height: 100vh;
+  transition: all 2.6s !important;
+}
+
+.header .wrapper nav ul{
+  list-style: none;
+  overflow-y: scroll;
+  padding: 0; 
+  padding-top: 10px;
+}
+.header .wrapper nav ul li{
+  align-items: center;
+  width: 100%; 
+}
+
+
+.header .wrapper nav ul li a{
+  position: relative;
+  display: block;
+  line-height:20px;
+  padding: 14px 5px;
+  width: 100%;
+  height: auto ;
+  text-decoration: none;
+  align-items: center;
+  transition: all 0.3s;
+  font-weight: 670;
+  font-family: times,Sans-Serif;
+}
+.header .wrapper nav ul li a .unread{
+ position: absolute;
+ top: 5px;
+ right: 5px;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ font-size: 15px;
+ border-radius: 9px;
+ background: var(--red);
+ color: #fff;
+ 
+}
+.active-nav{
+  background: linear-gradient(-58deg,#14f7a0,#faad00);
+}
+.header .wrapper nav ul li a:hover{
+ border-left: 8px solid #000;
+ background:var(--grydimigo);
+ color: #fff;
+ box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+.header .wrapper nav ul li a span{
+  font-size: 22px;
+  padding-right: 7px;
+  padding-left: 12px; 
+  font-weight: 100;
+}
+/*this below two classes is important*/
+.showwr{
+  left: 0 !important;
+}
+.shownav {
+  left: 0 !important; 
+}
+
+
+/*|||| All Upper css code for Navbar and header ||||*/
+
+/*//// dash board card start ////*/
+.order-card {
+    color: #fff;
+}
+
+.bg-c-blue {
+    background: linear-gradient(45deg,#4099ff,#73b4ff);
+}
+
+.bg-c-green {
+    background: linear-gradient(45deg,#2ed8b6,#59e0c5);
+}
+
+.bg-c-yellow {
+    background: linear-gradient(45deg,#FFB64D,#ffcb80);
+}
+
+.bg-c-pink {
+    background: linear-gradient(45deg,#FF5370,#ff869a);
+}
+.bg-c-another{
+    background:linear-gradient(45deg,rgba(133,83,255,0.915),rgb(255,169,134));
+} 
+.bg-c-another1{
+    background:linear-gradient(45deg,rgba(226,83,255,0.824),rgb(134,177,255));
+} 
+
+.bg-c-some{
+  background: linear-gradient(45deg,rgba(255,83,112,0.563),rgba(134,255,228,0.499),rgba(172,255,134,0.41));
+}
+
+.card {
+    border-radius: 5px;
+    -webkit-box-shadow: 0 1px 2.94px 0.06px rgba(4,26,55,0.16);
+    box-shadow: 0 1px 2.94px 0.06px rgba(4,26,55,0.16);
+    border: none;
+    margin-bottom: 30px;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+  display: flex;
+  justify-content: space-between;
+}
+
+.card .card-block {
+    padding: 25px;
+}
+
+.order-card i {
+    font-size: 26px;
+}
+
+.f-left {
+    float: left ;
+}
+
+.f-right {
+    float: right;
+}
+/*/// dash card////*/
+
+/*----Universal Table styling ---- */
+.customers {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.customers td, .customers th {
+  border: 1px solid #ddd;
+  padding: 8px;
+  transition: all 1.3s;
+}
+
+.customers tr:nth-child(even){
+  background-color:rgb(228,228,228);
+}
+
+.customers tr:hover {background-color: rgba(84,255,225,0.886);
+  color: blac;
+  
+}
+
+.customers th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: rgb(0,207,131);
+  color: white;
+}
+/*////Some important class overwrite////*/
+.float-right{ 
+  float: right !important;
+}
+
+.tbl-col1{
+ background: rgba(54, 162, 235, 0.2);
+}
+.tbl-col2{
+ background: rgba(203,245,109,0.2);
+}
+.tbl-col3{
+ background: rgba(255, 99, 132, 0.2);
+}
+.tbl-col4{
+ background: rgba(255, 206, 86, 0.2);
+}
+.tbl-col5{
+ background: rgba(153, 102, 255, 0.2);
+}
+
+ .form-group{
+  padding: 0.67rem;
+}
+.form-group button{
+  margin: 0.67rem;
+}
+label{
+  font-weight: 510;
+  color: var(--primary-text);
+  font-family: sans-serif;
+  font-style: italic;
+}
+
+input[type="number"]{
+  background: rgb(253,253,252);
+  padding-top: 8px;
+  padding-bottom: 8px;
+  border-radius: 30px;
+}
+input[type="number"]:focus{
+  border: 2px solid #00ff77eb;
+  outline: none;
+  box-shadow: none;
+}
+input[type="text"]{
+  background: rgb(253,253,252);
+  padding-top: 8px;
+  padding-bottom: 8px;
+  border-radius: 30px;
+}
+input[type="text"]:focus{
+  border: 2px solid #00ff77eb;
+  outline: none;
+  box-shadow: none;
+}
+input[type="password"]{
+  background: rgb(253,253,252);
+  padding-top: 8px;
+  padding-bottom: 8px;
+  border-radius: 30px;
+}
+input[type="password"]:focus{
+  border: 2px solid #00ff77eb;
+  outline: none;
+  box-shadow: none;
+}
+select{
+  -webkit-appearance: none;
+        -moz-appearance: none;
+        -ms-appearance: none;
+        appearance: none;
+  background: rgb(253,253,247) !important;
+  padding-top: 8px !important;
+  padding-bottom: 8px !important;
+  border-radius: 30px !important;
+} 
+select:focus{
+  border: 2px solid #00ff77eb !important;
+  outline: none;
+  box-shadow: none !important;
+}
+
+
+::placeholder {
+  color: var(--primary-text);
+  font-weight: 620;
+}
+
+.special-font {
+  font-family: 'Mochiy Pop P One', sans-serif;
+}
+/*////Some important class  end////*/
+/*loader style start */
+	#divLoading	{
+		display : none;
+	}
+	#divLoading.show{
+		display : block;
+		position : fixed;
+		z-index: 10000;
+		background-image : url('Wave-Loader-1.svg');
+		background-color:rgba(26,26,26,0.935);
+		opacity : 0.8;  
+		background-repeat : no-repeat;
+		background-position : center;
+		left : 0;
+		bottom : 0;
+		right : 0;
+		top : 0;
+	}
+	#loadinggif.show {left : 50%;
+		top : 50%;
+		position : absolute;
+		z-index : 10005;
+		width : 32px;
+		height : 32px;
+		margin-left : -16px;
+		margin-top : -16px;
+	}
+	/*lodaer style end */
+	.Purchased-product .card .card-header {
+	  background: var(--grybest);
+	  font-family: 'Mochiy Pop P One', sans-serif;
+  color: white;
+  border-radius: 0.25rem ;
+  padding: 1rem;
+	}
+	
+	.showgst{
+	  display: block !important;
+	} 
+@media screen and (min-width: 680px) {
+  .table-responsive{
+    max-height: 1000px;
+  }
+}
