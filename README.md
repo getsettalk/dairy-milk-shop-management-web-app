@@ -34,10 +34,10 @@ in this app having lots of feature use this and support us !!!
 
 # How to use this Web app/ installl :
    * first of all clone or download this project fiile,
-   * than go to make-login.php and its file change database configaration ,\
+   * than go to make-login.php and its file change database configaration ,
    * you have also change conn.php file database connection parameters, this file have inc folder (inc/conn.php)
    * i have saperated all connection for security reasions.
-   * set your database "host", passwprd","atabase name ",
+   * set your database "host", passwprd","database name ",
    * now start your apache server and export sql file in relative database name
    *  sql file name is "u280521645_dairy" 
 
